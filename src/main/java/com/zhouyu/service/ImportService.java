@@ -56,6 +56,7 @@ public class ImportService {
         }
 
         try {
+            //线程池去消费任务
             executorService.invokeAll(tasks);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
